@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Classifier - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pokemon_styles.css') }}">
+</head>
+<body background="..\static\pimg.jpg">
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="predictions">
+            <p>The Top-3 Predictions are:</p>
+            <div class="prediction"><span class="rank">1.</span> <strong>{{ pokemon_name1 }}</strong></div>
+            <div class="prediction"><span class="rank">2.</span> <strong>{{ pokemon_name2 }}</strong></div>
+            <div class="prediction"><span class="rank">3.</span> <strong>{{ pokemon_name3 }}</strong></div>
+        </div>
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Pokemon">
+        <br><br>
+        <a href="/">Classify Another Image</a>
+    </div>
+</body>
+</html>
